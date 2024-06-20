@@ -1,0 +1,22 @@
+{
+    "name": "math/symbol",
+    "description": "A package that contains alot of mathmetic symbols",
+    "type": "package",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Karim El-Kady",
+            "email": "karim.elkady.kmk@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Math\\MathProv\\" : "src/"
+        }
+    }
+}
