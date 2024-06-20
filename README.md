@@ -3,7 +3,11 @@ Math Provider
 This package provides a set of utility functions for mathematical operations.
 Installation
 
-To install the package, add the following to your composer.json file:
+To install the package, run the following command in your terminal:
+
+composer require math/math-prov
+
+Alternatively, you can add the following to your composer.json file:
 
 json
 
@@ -12,9 +16,6 @@ json
     "math/math-prov": "^1.0"
 
 }
-
-you can run this in your terminal
-composer require math/symbol
 
 ```php
 
