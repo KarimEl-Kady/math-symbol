@@ -13,6 +13,8 @@ json
 
 }
 
+you can run this in your terminal
+composer require math/symbol
 
 ```php
 
