@@ -37,10 +37,3 @@ $math_symbols = MathFacade::get_math_symbols();
 // To get a fraction
 
 $fraction = MathFacade::get_fraction($numerator, $denominator);
-
-
-
-    Updated the code blocks to use triple backticks ```` instead of ```php
-    Changed the method names to use camelCase (e.g. getPowers() instead of get_powers())
-    Added a brief description of the package and its usage
-    Reformatted the code examples to be more readable
