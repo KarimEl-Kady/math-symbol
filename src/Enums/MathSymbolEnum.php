@@ -1,6 +1,6 @@
 <?php
 
-namespace Math\src;
+namespace Math\Enums;
 
 enum MathOperatorEnum :string
 {

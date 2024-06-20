@@ -3,9 +3,9 @@
 namespace Math\MathProv;
 
 use Illuminate\Support\ServiceProvider;
-use Math\src\MathOperatorEnum;
-use Math\src\MathPowerEnum;
-use Math\src\MathRootEnum;
+use Math\Enums\MathOperatorEnum;
+use Math\Enums\MathPowerEnum;
+use Math\Enums\MathRootEnum;
 
 class MathProvider extends ServiceProvider
 {
@@ -15,7 +15,6 @@ class MathProvider extends ServiceProvider
      *
      * @var array
      */
-
     protected $providers = [
         MathPowerEnum::class,
         MathRootEnum::class,
@@ -23,11 +22,11 @@ class MathProvider extends ServiceProvider
     ];
 
     /**
-     * Register the services.
+     * Register services.
      *
      * @return void
      */
-    public function register(): void
+    public function register()
     {
         $this->registerProviders();
     }
@@ -37,7 +36,7 @@ class MathProvider extends ServiceProvider
      *
      * @return void
      */
-    protected function registerProviders(): void
+    protected function registerProviders()
     {
         foreach ($this->providers as $provider) {
             $this->app->register($provider);
@@ -46,9 +45,11 @@ class MathProvider extends ServiceProvider
 
     /**
      * Bootstrap services.
+     *
+     * @return void
      */
-    public function boot(): void
+    public function boot()
     {
-        //
+        // Optionally, you can bootstrap any services or configurations here
     }
 }
