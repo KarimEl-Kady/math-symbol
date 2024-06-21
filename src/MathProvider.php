@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Math\Enums\MathOperatorEnum;
 use Math\Enums\MathPowerEnum;
 use Math\Enums\MathRootEnum;
+use Math\Services\MathService;
 
 class MathProvider extends ServiceProvider
 {
@@ -28,16 +29,11 @@ class MathProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerProviders();
-    }
+        $this->app->bind('math', function () {
+            return new MathService();
+        });
 
-    /**
-     * Register the providers.
-     *
-     * @return void
-     */
-    protected function registerProviders()
-    {
+        // Register enum classes (if they need to be registered as providers)
         foreach ($this->providers as $provider) {
             $this->app->register($provider);
         }
