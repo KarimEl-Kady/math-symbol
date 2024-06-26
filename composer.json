@@ -1,9 +1,8 @@
 {
     "name": "math/symbol",
-    "description": "A package that contains alot of mathmetic symbols",
-    "type": "package",
+    "description": "A package that contains a lot of mathematical symbols",
+    "type": "library",
     "license": "MIT",
-    "version": "1.0.3",
     "authors": [
         {
             "name": "Karim El-Kady",
@@ -17,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Math\\MathProv\\" : "src/"
+            "Math\\": "src/"
         }
     }
 }
