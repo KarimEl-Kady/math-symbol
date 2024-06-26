@@ -12,17 +12,6 @@ class MathProvider extends ServiceProvider
 {
 
     /**
-     * The providers for the package.
-     *
-     * @var array
-     */
-    protected $providers = [
-        MathPowerEnum::class,
-        MathRootEnum::class,
-        MathOperatorEnum::class,
-    ];
-
-    /**
      * Register services.
      *
      * @return void
@@ -32,11 +21,6 @@ class MathProvider extends ServiceProvider
         $this->app->bind('math', function () {
             return new MathService();
         });
-
-        // Register enum classes (if they need to be registered as providers)
-        foreach ($this->providers as $provider) {
-            $this->app->register($provider);
-        }
     }
 
     /**
